@@ -1,4 +1,3 @@
-
 # House Price Prediction Model
 
 ## Overview
@@ -33,15 +32,21 @@ We cleaned and preprocessed the data by:
 To ensure that all features contribute equally to the model, we scaled the data using normalization/standardization techniques. This step improves model convergence and accuracy by preventing features with larger values from dominating the model.
 
 ### 3. Model Building
-We built a regression model using various algorithms (e.g., Linear Regression, Ridge, Lasso) to predict house prices based on the input features.
+We built several regression models, including:
+- **Linear Regression**
+- **Random Forest**
+- **XGBoost**
+
+Each model was trained and evaluated to predict house prices, with the **XGBoost** model providing the best results.
 
 ### 4. Evaluation
 The model's performance was evaluated using the following metrics:
+- **R-squared (R²)**
 - **Mean Absolute Error (MAE)**
 - **Mean Squared Error (MSE)**
-- **R-squared (R²)**
+- **Root Mean Squared Error (RMSE)**
 
-These metrics helped us measure how accurately the model predicted house prices and identify areas for improvement.
+Among the tested models, XGBoost performed the best, offering the highest accuracy and lowest error rates.
 
 ## Dependencies
 To run this project, you'll need the following Python libraries:
@@ -50,6 +55,7 @@ To run this project, you'll need the following Python libraries:
 - `matplotlib`
 - `seaborn`
 - `scikit-learn`
+- `xgboost`
 
 You can install the dependencies using:
 ```bash
@@ -67,4 +73,4 @@ pip install -r requirements.txt
 4. Modify and experiment with different algorithms and parameters to improve the model.
 
 ## Conclusion
-This project demonstrates the full pipeline for building a machine learning regression model, from data cleaning and preprocessing to model evaluation. The model provides valuable insights into the factors influencing house prices and offers a solid baseline for further improvements.
+This project demonstrates the full pipeline for building a machine learning regression model, from data cleaning and preprocessing to model evaluation. After testing multiple models, XGBoost provided the most accurate predictions, highlighting its robustness in handling complex datasets.
